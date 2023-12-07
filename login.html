@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>LOGIN</title>
+  <!-- Add your CSS file here -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+  <link rel="stylesheet" href="login-styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=DM+Serif+Display&family=Faster+One&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <meta name="description" content="Step into a world of adventure with ANDAMO: your new travel advisor platform. Sign in today and let the exploration begin!Discover beautiful destinations, craft your perfect itinerary, and embark on unforgettable journeys">
+
+</head>
+<body>
+  <div class="top-banner">
+    <h1>ANDAMO</h1>
+    
+  </div> 
+  <p>Step into a world of adventure with ANDAMO: 
+    <br>your new travel advisor platform.
+    <p2><br><br>Sign in today and let the exploration begin!</p2></p>
+  <aside>
+    
+  <div class="login-container">
+    <input id="username-input" type="text" placeholder="Username">
+    <input id="password-input" type="password" placeholder="Password">
+    <button id="login-btn" class="login-btn">Login</button>
+
+    <a id="forgot-password" href="#">Forgot password?</a>
+  </div>
+  
+  <div class="google-login-container">
+    <button id="google-btn" class="login-btn">Continue with Google</button>
+    <a id="register-link" href="#">Register with your email</a>
+    <div id="register-modal" style="display: none;">
+      <div class="registration">
+        <input id="register-username-input" type="text" placeholder="Enter your Email">
+        <input id="register-password-input" type="password" placeholder="Enter your Password">
+        <button id="register-btn" class="register-btn">Register</button>
+      </div>
+
+    </div>
+    <p id="error-message" class="error-message"></p>
+
+  </div>
+
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Images will be dynamically added here -->
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+</aside>
+<p> <p2>Discover beautiful destinations, craft your perfect itinerary, and embark on unforgettable journeys</p2></p>
+
+  
+
+  <!-- Add the login script -->
+  <script defer type="module" src="login.js"></script>
+</body>
+</html>

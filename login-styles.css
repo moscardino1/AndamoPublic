@@ -1,0 +1,199 @@
+/* ANDAMO BANNER */
+.top-banner {
+    background-color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: fit-content;
+    padding: 0;
+    position: relative;
+  }
+  
+  /* a */
+  .top-banner h1 {
+    font-family: 'Faster One', cursive;
+    font-family: 'Bungee Shade', cursive;
+    font-size: 2rem;
+    margin: 0.2rem;
+    padding: 0.2rem;
+    color: #ffffff;
+    text-align: center;
+  }
+  
+  /* Body styles */
+  body {
+    font-family: 'Bungee Shade', cursive;
+    margin: 0;
+    padding: 0;
+    background-color: #000000;
+    height: 100%;
+  }
+  
+  /* Login container styles */
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    padding: 20px;
+    width: 300px; /* Adjust the width as needed */
+    margin: 0 auto;
+  }
+  
+  /* Input field styles */
+  .login-container input {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%; /* Full width */
+  }
+  
+  /* Login button styles */
+  .login-btn, .register-btn {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-family: 'Faster One', cursive;
+    font-family: 'Bungee Shade', cursive;
+    padding: 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+
+ 
+  }
+  
+  /* Google login container styles */
+  .google-login-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+    padding: 20px;
+
+  }
+  
+  /* Error message styles */
+  .error-message {
+    color: #ff0000;
+    font-size: 1rem;
+    /* margin-top: 10px; */
+    text-align: center;
+  }
+  
+  /* Link styles */
+  a {
+    color: #ffffff;
+    text-decoration: none;
+    margin-top: 10px;
+  }
+  
+  a:hover {
+    text-decoration: underline;
+  }
+
+  .registration {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 50%;
+    padding: 20px;
+    width: 300px; /* Adjust the width as needed */
+    margin: 0 auto;
+  }
+
+
+  /* Input field styles */
+  .registration input {
+    font-family: 'Bungee Shade', cursive;
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    padding: 10px;
+    width: 100%; /* Full width */
+  }
+
+  /* Catchy text styles */
+/* Catchy text styles */
+ p {
+  font-size: 1.5rem;
+  text-align: center;
+  margin: 10px;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 5s linear infinite;
+}
+
+p2 {
+  font-size: 1.1rem;
+  background: linear-gradient(45deg, #ff00ff, #00ffff, #ffff00);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: rainbow 5s linear infinite;
+}
+
+
+@keyframes rainbow {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+.swiper-container {
+  width: 100%;
+  height: 100%;
+  border-radius: 8px;
+  overflow: auto;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 400px;
+  object-fit: cover;
+  border-radius: 8px;
+  filter: brightness(70%);
+  transition: transform 0.3s ease-in-out;
+}
+
+.swiper-slide:hover img {
+  transform: scale(1.1);
+  filter: brightness(100%);
+}
+
+.swiper-slide::before {
+  content: "";
+  /* position: absolute; */
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  border-radius: 8px;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.swiper-slide:hover::before {
+  opacity: 1;
+}
+
+.slider-item {
+  align-items: row;
+  flex-wrap: nowrap;
+  margin: 0.9rem;
+  border-radius: 8px;
+  width: 100%;
+}
+
+.slider-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: bottom;
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+}

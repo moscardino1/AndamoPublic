@@ -1,0 +1,159 @@
+<html>
+
+<head>
+  <!-- <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no"> -->
+  <link rel="stylesheet" href="styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee+Shade&family=DM+Serif+Display&family=Faster+One&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+    integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI=" crossorigin="" />
+  <!-- Your existing link tags here -->
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <title>Andamo</title>
+<meta name="google-site-verification" content="uy7Ph2gqje_-uSxIBapoPFZy44-9iqiUTcYATT-wuEo" />
+<meta name="description" content="Step into a world of adventure with ANDAMO: your new travel advisor platform. Sign in today and let the exploration begin!Discover beautiful destinations, craft your perfect itinerary, and embark on unforgettable journeys">
+
+</head>
+<header>
+  <div class="top-banner">
+    <h1>Andamo</h1>
+  </div>
+</header>
+
+<body>
+  <!-- Create a search bar with an input field and an icon -->
+  <div class="search-container">
+    <!-- Your existing HTML code here -->
+    <div class="search-bar-container">
+      <div class="search-bar">
+        <i class="fa fa-search"></i>
+        <input id="search-input" type="text" placeholder="Search for a city...">
+        <div id="autocomplete-list" class="autocomplete-items"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Scrollable section with different elements -->
+  <div class="scrollable-section">
+    <div class="scrollable-item" id="Food">
+      <i class="fa fa-cutlery"></i>
+      <span class="category">Food</span>
+    </div>
+    <div class="scrollable-item" id="Drinks">
+      <i class="fa fa-glass"></i>
+      <span class="category">Drinks</span>
+    </div>
+    <div class="scrollable-item" id="Breakfast">
+      <i class="fa fa-coffee"></i>
+      <span class="category">Breakfast</span>
+    </div>
+    <div class="scrollable-item" id="Museum">
+      <i class="fa fa-university"></i>
+      <span class="category">Museum</span>
+    </div>
+    <div class="scrollable-item" id="Park">
+      <i class="fa fa-tree"></i>
+      <span class="category">Park</span>
+    </div>
+    <div class="scrollable-item" id="Shop">
+      <i class="fa fa-shopping-bag"></i>
+      <span class="category">Shop</span>
+    </div>
+    <div class="scrollable-item" id="Beach">
+      <i class="fa fa-bath"></i>
+      <span class="category">Beach</span>
+    </div>
+  </div>
+
+</div>
+  <div class="container">    
+    <button id="showListButton">List  <i class="fa fa-list icon"></i></button>
+    <button id="showMapButton">Map  <i class="fa fa-map icon"></i></button>
+  </div>
+
+<div id="listView" style="display: none;"> <!-- This section will display the list view -->
+  <!-- Add your code to display the list of locations here -->  
+  <div class="filter-container">
+    <input type="text" id="searchBox" placeholder="Filter locations">
+    <select id="sortSelect">
+      <option value="name">Sort by Name</option>
+      <option value="distance">Sort by Distance</option>
+    </select>
+  </div>
+  <ul id="locationList">
+    <!-- List items will be dynamically added here -->
+  </ul>
+  
+</div>
+
+<div id="mapView"style="display: block;"> <!-- This section will display the map view -->
+  <!-- Add your code to display the map and sliders here -->
+  <div class="map-banner">
+    <section id="map"></section>
+  </div>
+  <div class="section-divider"></div>
+  <h2>Discover</h2>
+  <section id="slider-section">
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <!-- Add your slider content here -->
+      </div>
+    </div>
+  </section>
+</div>
+  </section>
+  <div id="contact-section">
+    <div class="contact-container">
+      <h2>Contacts</h2>
+      <p>If you have any questions or inquiries, feel free to email me at <a href="mailto:alessandrocarli90@gmail.com">alessandrocarli90@gmail.com</a></p>
+      <a href="#" id="open_preferences_center">Update cookies preferences</a>
+      <div id="user-info">
+        <p>Logged in as: <span id="user-email"></span></p>
+        <button id="logout-button">Logout</button>
+
+        <p>Current Google Sheet ID: <span id="gsheet-id"></span></p>
+
+      </div>
+      <div id="entergsheet"> 
+        <label for="new-gsheet-id"></label>
+        <input type="text" id="new-gsheet-id" placeholder="Insert Your G-Sheet ID">
+        <button id="change-gsheet-id">Change</button>
+      </div>
+    </div>
+    <h8>Use this Google Sheet as Reference: <br> </h8>
+      <a href="https://docs.google.com/spreadsheets/d/18qq79HtX5uFhIRPC2jgV_j9nGfH3CcFR5Pj5-RW9k4A/edit#gid=678788904">Gsheet</a>
+  
+  
+<script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+		integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+<!-- Cookie Consent by FreePrivacyPolicy.com https://www.FreePrivacyPolicy.com -->
+<script type="text/javascript" src="//www.freeprivacypolicy.com/public/cookie-consent/4.1.0/cookie-consent.js" charset="UTF-8"></script>
+<script type="text/javascript" charset="UTF-8">
+document.addEventListener('DOMContentLoaded', function () {
+cookieconsent.run({"notice_banner_type":"interstitial","consent_type":"express","palette":"dark","language":"en","page_load_consent_levels":["strictly-necessary"],"notice_banner_reject_button_hide":false,"preferences_center_close_button_hide":false,"page_refresh_confirmation_buttons":false,"website_name":"Andamo"});
+});
+</script>
+
+
+<noscript>Cookie Consent by <a href="https://www.freeprivacypolicy.com/">Free Privacy Policy Generator</a></noscript>
+<!-- End Cookie Consent by FreePrivacyPolicy.com https://www.FreePrivacyPolicy.com -->
+  <!-- Add the goog ads -->
+<!-- <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4265503582637482"
+     crossorigin="anonymous"></script> -->
+  <!-- Add the Swiper library JS file -->
+  
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+    integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM=" crossorigin=""></script>
+
+  <!-- Include the JS code for autocomplete and search -->
+  <script defer type="module" src="script.js"></script>
+
+</body>
+
+</html>
